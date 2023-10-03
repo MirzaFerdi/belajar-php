@@ -45,7 +45,7 @@
         <a href="dashboard.php" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="product.php" class="nav-link">New Product</a>
+        <a href="product.php" class="nav-link">Product</a>
       </li>
     </ul>
 
@@ -221,7 +221,7 @@
             <a href="product.php" class="nav-link">
               <i class="nav-icon fas fa-book"></i>
               <p>
-                New Product
+                Product
               </p>
             </a>
           </li>
