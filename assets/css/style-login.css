@@ -1,0 +1,40 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    color: #0d1b46;
+    background-color: #0e387a;
+    font-family: Tahoma, sans-serif;
+}
+
+.form-login{
+    font-size: 15px
+}
+
+input::placeholder{
+    font-size: 13px;
+}
+
+.login{
+    background-color: #9fafca;
+    color: #ffffff;
+}
+.login:hover{
+    background-color: #111216;
+    color: #ffffff;
+}
+
+.login-google{
+    background-color: #0e387a;
+    color: #ffffff;
+}
+.login-google:hover{
+    background-color: #111216;
+    color: #ffffff;
+}
+
+@media screen and (max-width: 400px){
+    .form-check, .btn, .signup{
+        font-size: small;
+    }
+}
