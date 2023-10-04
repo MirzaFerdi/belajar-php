@@ -44,9 +44,6 @@
       <li class="nav-item d-none d-sm-inline-block">
         <a href="dashboard.php" class="nav-link">Home</a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="product.php" class="nav-link">Product</a>
-      </li>
     </ul>
 
     <!-- Right navbar links -->
@@ -222,6 +219,14 @@
               <i class="nav-icon fas fa-book"></i>
               <p>
                 Product
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="productarray.php" class="nav-link ">
+              <i class="nav-icon fas fa-layer-group"></i>
+              <p>
+                Product Array
               </p>
             </a>
           </li>

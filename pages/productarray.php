@@ -236,7 +236,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="product.php" class="nav-link active">
+            <a href="product.php" class="nav-link">
               <i class="nav-icon fas fa-book"></i>
               <p>
                 Product
@@ -244,7 +244,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="productarray.php" class="nav-link ">
+            <a href="productarray.php" class="nav-link active">
               <i class="nav-icon fas fa-layer-group"></i>
               <p>
                 Product Array
@@ -265,12 +265,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Product</h1>
+            <h1>Product Array</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Product</li>
+              <li class="breadcrumb-item active">Product Array</li>
             </ol>
           </div>
         </div>
@@ -284,22 +284,25 @@
       <div class="card card-solid">
         <div class="card-body pb-0">
           <div class="row">
+            <?php 
+            foreach ($produk as $key => $value) {
+            ?>
             <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column">
               <div class="card bg-light d-flex flex-fill">
                 <div class="card-header text-muted border-bottom-0">
-                  <?php echo $produk[0]["kategori"]?>
+                  <?php echo $value["kategori"]?>
                 </div>
                 <div class="card-body pt-0">
                   <div class="row">
                     <div class="col-7">
-                      <h2 class="lead"><b><?php echo $produk[0]["nama"]?></b></h2>
-                      <p class="text-muted text-sm"><?php echo $produk[0]["deskripsi"]?></p>
+                      <h2 class="lead"><b><?php echo $value["nama"]?></b></h2>
+                      <p class="text-muted text-sm"><?php echo $value["deskripsi"]?></p>
                       <ul class="ml-4 mb-0 fa-ul text-muted">
-                        <li class="small"><span class="fa-li"><i class="fas fa-tag"></i></span><?php echo $produk[0]["harga"]?></li>
+                        <li class="small"><span class="fa-li"><i class="fas fa-tag"></i></span><?php echo $value["harga"]?></li>
                       </ul>
                     </div>
                     <div class="col-5 text-center">
-                      <img src="<?php echo $produk[0]["gambar"]?>" alt="keyboard1" class=" img-fluid">
+                      <img src="<?php echo $value["gambar"]?>" alt="keyboard1" class=" img-fluid">
                     </div>
                   </div>
                 </div>
@@ -315,161 +318,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column">
-              <div class="card bg-light d-flex flex-fill">
-                <div class="card-header text-muted border-bottom-0">
-                  <?php echo $produk[1]["kategori"]?>
-                </div>
-                <div class="card-body pt-0">
-                  <div class="row">
-                    <div class="col-7">
-                      <h2 class="lead"><b><?php echo $produk[1]["nama"]?></b></h2>
-                      <p class="text-muted text-sm"><?php echo $produk[1]["deskripsi"]?></p>
-                      <ul class="ml-4 mb-0 fa-ul text-muted">
-                        <li class="small"><span class="fa-li"><i class="fas fa-tag"></i></span><?php echo $produk[1]["harga"]?></li>
-                      </ul>
-                    </div>
-                    <div class="col-5 text-center">
-                      <img src="<?php echo $produk[1]["gambar"]?>" alt="keyboard2" class=" img-fluid">
-                    </div>
-                  </div>
-                </div>
-                <div class="card-footer">
-                  <div class="text-right">
-                    <a href="#" class="btn btn-danger btn-sm ">
-                      <i class="fas fa-trash-alt"></i>
-                    </a>
-                    <a href="#" class="btn btn-sm bg-teal">
-                      <i class="fas fa-edit"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column">
-              <div class="card bg-light d-flex flex-fill">
-                <div class="card-header text-muted border-bottom-0">
-                  <?php echo $produk[2]["kategori"]?>
-                </div>
-                <div class="card-body pt-0">
-                  <div class="row">
-                    <div class="col-7">
-                      <h2 class="lead"><b><?php echo $produk[2]["nama"]?></b></h2>
-                      <p class="text-muted text-sm"><?php echo $produk[2]["deskripsi"]?></p>
-                      <ul class="ml-4 mb-0 fa-ul text-muted">
-                        <li class="small"><span class="fa-li"><i class="fas fa-tag"></i></span><?php echo $produk[2]["harga"]?></li>
-                      </ul>
-                    </div>
-                    <div class="col-5 text-center">
-                      <img src="<?php echo $produk[2]["gambar"]?>" alt="keyboard1" class=" img-fluid">
-                    </div>
-                  </div>
-                </div>
-                <div class="card-footer">
-                  <div class="text-right">
-                    <a href="#" class="btn btn-danger btn-sm ">
-                      <i class="fas fa-trash-alt"></i>
-                    </a>
-                    <a href="#" class="btn btn-sm bg-teal">
-                      <i class="fas fa-edit"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column">
-              <div class="card bg-light d-flex flex-fill">
-                <div class="card-header text-muted border-bottom-0">
-                  <?php echo $produk[3]["kategori"]?>
-                </div>
-                <div class="card-body pt-0">
-                  <div class="row">
-                    <div class="col-7">
-                      <h2 class="lead"><b><?php echo $produk[3]["nama"]?></b></h2>
-                      <p class="text-muted text-sm"><?php echo $produk[3]["deskripsi"]?></p>
-                      <ul class="ml-4 mb-0 fa-ul text-muted">
-                        <li class="small"><span class="fa-li"><i class="fas fa-tag"></i></span><?php echo $produk[3]["harga"]?></li>
-                      </ul>
-                    </div>
-                    <div class="col-5 text-center">
-                      <img src="<?php echo $produk[3]["gambar"]?>" alt="keyboard1" class=" img-fluid">
-                    </div>
-                  </div>
-                </div>
-                <div class="card-footer">
-                  <div class="text-right">
-                    <a href="#" class="btn btn-danger btn-sm ">
-                      <i class="fas fa-trash-alt"></i>
-                    </a>
-                    <a href="#" class="btn btn-sm bg-teal">
-                      <i class="fas fa-edit"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column">
-              <div class="card bg-light d-flex flex-fill">
-                <div class="card-header text-muted border-bottom-0">
-                  <?php echo $produk[4]["kategori"]?>
-                </div>
-                <div class="card-body pt-0">
-                  <div class="row">
-                    <div class="col-7">
-                      <h2 class="lead"><b><?php echo $produk[4]["nama"]?></b></h2>
-                      <p class="text-muted text-sm"><?php echo $produk[4]["deskripsi"]?></p>
-                      <ul class="ml-4 mb-0 fa-ul text-muted">
-                        <li class="small"><span class="fa-li"><i class="fas fa-tag"></i></span><?php echo $produk[4]["harga"]?></li>
-                      </ul>
-                    </div>
-                    <div class="col-5 text-center">
-                      <img src="<?php echo $produk[4]["gambar"]?>" alt="keyboard1" class=" img-fluid">
-                    </div>
-                  </div>
-                </div>
-                <div class="card-footer">
-                  <div class="text-right">
-                    <a href="#" class="btn btn-danger btn-sm ">
-                      <i class="fas fa-trash-alt"></i>
-                    </a>
-                    <a href="#" class="btn btn-sm bg-teal">
-                      <i class="fas fa-edit"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column">
-              <div class="card bg-light d-flex flex-fill">
-                <div class="card-header text-muted border-bottom-0">
-                  <?php echo $produk[5]["kategori"]?>
-                </div>
-                <div class="card-body pt-0">
-                  <div class="row">
-                    <div class="col-7">
-                      <h2 class="lead"><b><?php echo $produk[5]["nama"]?></b></h2>
-                      <p class="text-muted text-sm"><?php echo $produk[5]["deskripsi"]?></p>
-                      <ul class="ml-4 mb-0 fa-ul text-muted">
-                        <li class="small"><span class="fa-li"><i class="fas fa-tag"></i></span><?php echo $produk[5]["harga"]?></li>
-                      </ul>
-                    </div>
-                    <div class="col-5 text-center">
-                      <img src="<?php echo $produk[5]["gambar"]?>" alt="keyboard1" class=" img-fluid">
-                    </div>
-                  </div>
-                </div>
-                <div class="card-footer">
-                  <div class="text-right">
-                    <a href="#" class="btn btn-danger btn-sm ">
-                      <i class="fas fa-trash-alt"></i>
-                    </a>
-                    <a href="#" class="btn btn-sm bg-teal">
-                      <i class="fas fa-edit"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <?php }?>
           </div>
         </div>
         <!-- /.card-body -->
