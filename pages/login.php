@@ -1,3 +1,9 @@
+<?php
+    // if (!isset($_SESSION['email'])){
+    //   echo "<script>alert('Login Berhasil!')</script>";
+    // }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -21,7 +27,7 @@
       <div
         class="row w-75 align-items-center shadow-sm bg-body-tertiary rounded"
       >
-      <form class="form-login col-lg-6 p-4" action="dashboard.php" method="post">
+      <form class="form-login col-lg-6 p-4" action="action-login.php" method="post">
           <h3 class="mb-3 text-center fw-bold">Sign In Dashboard</h3>
           <div class="mb-3">
             <label for="formEmail" class="form-label">Email</label>

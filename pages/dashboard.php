@@ -1,3 +1,12 @@
+<?php
+    session_start();
+    if (!isset($_SESSION['email'])){
+        header("Location: login.php");
+    }
+ 
+     
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -165,6 +174,12 @@
           <i class="fas fa-th-large"></i>
         </a>
       </li>
+      <li class="nav-item dropdown">
+        <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle"></a>
+        <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
+          <li><a href="action-logout.php" class="dropdown-item">Log Out </a></li>
+        </ul>
+      </li>
     </ul>
   </nav>
   <!-- /.navbar -->
@@ -244,7 +259,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Dashboard</h1>
+            <h1 class="m-0">Selamat Datang <?php echo $_SESSION['email']?></h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
