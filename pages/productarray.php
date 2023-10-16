@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Admin | Products</title>
+  <title>Admin | Products Array</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -254,6 +254,14 @@
               <i class="nav-icon fas fa-layer-group"></i>
               <p>
                 Product Array
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="productcrud.php" class="nav-link ">
+              <i class="nav-icon fas fa-table"></i>
+              <p>
+                Product CRUD
               </p>
             </a>
           </li>
