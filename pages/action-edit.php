@@ -13,10 +13,10 @@
         $stock = $_POST['stock'];
         $image = $_POST['image'];  
     
-        $query = "UPDATE products SET product_name = '$product_name', category_id = '$category_id', product_code = '$product_code', description = '$description', price = '$price', unit = '$unit', discount_amount = '$discount_amount', stock = '$stock', image = '$image' WHERE id = '$id'";
+        $query = "UPDATE products SET product_name = '$product_name', category_id = '$category_id', 
+        product_code = '$product_code', description = '$description', price = '$price', unit = '$unit',
+         discount_amount = '$discount_amount', stock = '$stock', image = '$image' WHERE id = '$id'";
     
-        // $query = "UPDATE products SET product_name = 'Coba data', category_id = '1', product_code = '123', description = '123', price = '123', unit = 'unit', discount_amount = '123', stock = '123', image = '' WHERE id = '3'";
-
         $result = mysqli_query($koneksi, $query);
     
         if($result){

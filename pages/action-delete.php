@@ -7,7 +7,6 @@
         $result = mysqli_query($koneksi, $query);
     
         if($result){
-            // echo "<script>alert('Berhasil menghapus data')</script>";
             header('Location:productcrud.php');
             die;
         } else {
