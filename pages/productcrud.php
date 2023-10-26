@@ -290,7 +290,7 @@ require "koneksi.php";
                   <thead>
                   <tr>
                     <th>Id</th>
-                    <th>Id Kategori</th>
+                    <th>Kategori</th>
                     <th>Kode Produk</th>
                     <th>Nama Produk</th>
                     <th>Deskripsi</th>
@@ -315,7 +315,8 @@ require "koneksi.php";
                     $jumlah_data = mysqli_num_rows($data);
                     $total_halaman = ceil($jumlah_data / $batas);
                     
-                    $data_product = "select * from products limit $halaman_awal, $batas";
+                    $data_product = "SELECT p.id, c.category_name, p.product_code, p.product_name, p.description, p.price, p.unit, p.discount_amount, p.stock, p.image FROM products p INNER JOIN product_categories c ON p.category_id = c.id LIMIT $halaman_awal, $batas";
+                    // products limit $halaman_awal, $batas";
                     $nomor = $halaman_awal+1;
 
                     if (isset($_POST['kata_kunci'])) {
@@ -334,7 +335,7 @@ require "koneksi.php";
                     ?>
                   <tr>
                     <td name="idTab" ><?php echo $row['id']?></td>
-                    <td><?php echo $row['category_id']?></td>
+                    <td><?php echo $row['category_name']?></td>
                     <td><?php echo $row['product_code']?></td>
                     <td><?php echo $row['product_name']?></td>
                     <td><?php echo $row['description']?></td>
@@ -413,8 +414,12 @@ require "koneksi.php";
               </div>
 
               <div class="mb-2">
-                <label for="nomorKategori" class="form-label">Id Kategori<span style="color: red;">(1-3)*</span></label>
-                <input type="number" class="form-control" id="nomorKategori" name="category_id" min="1" max="3" required>
+                <label for="namaProduk" class="form-label">Kategori<span style="color: red;">*</span></label>
+                <select class="form-control" id="category_id" name="category_id">
+                  <option value="1">Keyboard</option>
+                  <option value="2">Headset</option>
+                  <option value="3">Monitor</option>
+                </select>
               </div>
 
               <div class="mb-2">
@@ -482,8 +487,12 @@ require "koneksi.php";
               </div>
 
               <div class="mb-2">
-                <label for="nomorKategori" class="form-label">Id Kategori<span style="color: red;">(1-3)*</span></label>
-                <input type="number" class="form-control" id="nomorKategori" name="category_id">
+                <label for="namaProduk" class="form-label">Kategori<span style="color: red;">*</span></label>
+                <select class="form-control category_id" id="category_id_edit" name="category_id">
+                  <option value="1">Keyboard</option>
+                  <option value="2">Headset</option>
+                  <option value="3">Monitor</option>
+                </select>
               </div>
 
               <div class="mb-2">

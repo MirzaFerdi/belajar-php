@@ -24,7 +24,7 @@
 
   const colId = document.getElementsByName('id');
   const colProductName = document.getElementsByName('product_name');
-  const colCategoyId = document.getElementsByName('category_id');
+  const selectElement = document.querySelectorAll('#category_id_edit option');
   const colProductCode = document.getElementsByName('product_code');
   const colDescription = document.getElementsByName('description');
   const colPrice = document.getElementsByName('price');
@@ -32,7 +32,6 @@
   const colDiskon = document.getElementsByName('discount_amount');
   const colStock = document.getElementsByName('stock');
   const colImg = document.getElementsByName('image');
-  console.log(colImg);
 
   // Mengambil data dari tabel dan memasukkan ke form ketika tombol edit diklik
 
@@ -55,7 +54,15 @@
       const image = parent.children[9].textContent;
 
       colId.forEach((colId) => colId.value = id);
-      colCategoyId.forEach((colCategoyId) => colCategoyId.value = category_id);
+      
+      selectElement.forEach((selectElement) => {
+        if (selectElement.textContent == category_id) {
+          selectElement.setAttribute( "selected", "selected" );
+        }else {
+          selectElement.removeAttribute( "selected" );
+        }
+      });
+
       colProductName.forEach((colProductName) => colProductName.value = product_name);
       colProductCode.forEach((colProductCode) => colProductCode.value = product_code);
       colDescription.forEach((colDescription) => colDescription.value = description);
