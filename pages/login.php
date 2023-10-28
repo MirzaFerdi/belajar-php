@@ -1,7 +1,11 @@
 <?php
-    // if (!isset($_SESSION['email'])){
-    //   echo "<script>alert('Login Berhasil!')</script>";
-    // }
+
+require "koneksi.php";
+
+session_start();
+if (isset($_SESSION['email'])){
+    header("Location: dashboard.php");
+}
 ?>
 
 <!DOCTYPE html>
@@ -91,7 +95,7 @@
             Don't have an account?
             <a
               style="text-decoration: none; color: black; font-weight: bold"
-              href="#"
+              href="signup.php"
               >Sign Up</a
             >
           </p>

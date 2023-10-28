@@ -1,6 +1,6 @@
 <?php
   require "koneksi.php";
-
+  require "tanggal.php";
   session_start();
   if (!isset($_SESSION['email'])){
       header("Location: login.php");
@@ -54,6 +54,9 @@
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="dashboard.php" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <span class="nav-link" ><?php echo $hari . $bulan . $jam; ?></span>
       </li>
     </ul>
 
@@ -885,9 +888,9 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-  <footer class="main-footer">
-    <strong>Copyright &copy; 2023 MirzaFerdi</strong>
-  </footer>
+    <footer class=" main-footer ">
+        <strong >Copyright &copy; 2023 MirzaFerdi </strong>
+    </footer>
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">

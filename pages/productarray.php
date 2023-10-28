@@ -1,3 +1,6 @@
+<?php 
+require "tanggal.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -70,6 +73,9 @@
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="dashboard.php" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <span class="nav-link" ><?php echo $hari . $bulan . $jam; ?></span>
       </li>
     </ul>
 
