@@ -4,11 +4,11 @@ session_start();
 
 $email = $_POST['email'];
 $password = $_POST['password'];
-$passSecure = mysqli_real_escape_string($koneksi, md5($password));
+$passSecure = $koneksi->securepassword($password);
 
 $sql = "SELECT * FROM users WHERE email = '$email' AND password = '$passSecure'";
-$query = mysqli_query($koneksi, $sql);
-$cek = mysqli_num_rows($query);
+$query = $koneksi->query($sql);
+$cek = $koneksi->jumlah_data($sql);
 if($cek != 0){
     $_SESSION['email'] = $email;
     $_SESSION['password'] = $passSecure;
